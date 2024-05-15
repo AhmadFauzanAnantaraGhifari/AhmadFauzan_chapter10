@@ -74,11 +74,6 @@ class HomeView extends GetView<HomeController> {
                                             220, 220, 220, 1),
                                         height: 60,
                                         width: 60,
-                                        child: Image.asset(
-                                          'assets/images/Person.png',
-                                          width: 50,
-                                          height: 50,
-                                        ),
                                       ),
                                     )
                                   : ClipOval(

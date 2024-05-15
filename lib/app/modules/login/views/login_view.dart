@@ -26,23 +26,14 @@ class LoginView extends GetView<LoginController> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 50),
-                    child: Image.asset(
-                      'assets/images/login-logo.png',
-                      width: 250,
-                      height: 250,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
                   Container(
                     width: 300,
                     height: 45,
                     child: Text(
-                      'Welcome To De Fred',
+                      'LOGIN',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                        color: Colors.black,
+                        color: const Color.fromARGB(255, 255, 255, 255),
                         fontSize: 24,
                         fontWeight: FontWeight.w500,
                       ),
@@ -57,7 +48,7 @@ class LoginView extends GetView<LoginController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.usernameController,
@@ -85,7 +76,7 @@ class LoginView extends GetView<LoginController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.passwordController,
@@ -112,7 +103,7 @@ class LoginView extends GetView<LoginController> {
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
-                          Color.fromRGBO(0, 0, 0, 1)),
+                          Color.fromRGBO(255, 255, 255, 1)),
                       minimumSize:
                           MaterialStateProperty.all<Size>(Size(350, 41)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -126,7 +117,7 @@ class LoginView extends GetView<LoginController> {
                       style: GoogleFonts.poppins(
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
-                        color: Color.fromRGBO(255, 255, 255, 1),
+                        color: Color.fromRGBO(0, 68, 255, 1),
                       ),
                       textAlign: TextAlign.center,
                     ),

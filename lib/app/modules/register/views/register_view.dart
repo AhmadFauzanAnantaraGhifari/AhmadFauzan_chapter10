@@ -30,10 +30,10 @@ class RegisterView extends GetView<RegisterController> {
                     width: 300,
                     height: 45,
                     child: Text(
-                      'Welcome To De Fred',
+                      'REGISTER',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                        color: Colors.black,
+                        color: const Color.fromARGB(255, 255, 255, 255),
                         fontSize: 25,
                         fontWeight: FontWeight.w500,
                       ),
@@ -48,7 +48,7 @@ class RegisterView extends GetView<RegisterController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.usernameController,
@@ -76,7 +76,7 @@ class RegisterView extends GetView<RegisterController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.nameController,
@@ -104,7 +104,7 @@ class RegisterView extends GetView<RegisterController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.addressController,
@@ -132,7 +132,7 @@ class RegisterView extends GetView<RegisterController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.phonenumberController,
@@ -160,7 +160,7 @@ class RegisterView extends GetView<RegisterController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.passwordController,
@@ -189,7 +189,7 @@ class RegisterView extends GetView<RegisterController> {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
-                            color: Colors.black),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                       ),
                       TextFormField(
                         controller: controller.confirmpasswordController,
@@ -230,14 +230,14 @@ class RegisterView extends GetView<RegisterController> {
                         if (password != confirmPassword) {
                           Get.snackbar('Error',
                               'Password and Confirm Password do not match',
-                              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                              backgroundColor: Color.fromARGB(255, 0, 38, 255),
                               colorText: Color(0xffffffff));
                         } else {
                           bool isUsernameExists =
                               await controller.isUsernameExists(username);
                           if (isUsernameExists) {
                             Get.snackbar('Error', 'Username already exists',
-                                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                                backgroundColor: Color.fromARGB(255, 4, 0, 255),
                                 colorText: Color(0xffffffff));
                           } else {
                             await controller.registerUser(
@@ -249,7 +249,7 @@ class RegisterView extends GetView<RegisterController> {
                             );
                             Get.snackbar(
                                 'Success', 'User registered successfully',
-                                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                                backgroundColor: Color.fromARGB(255, 0, 4, 255),
                                 colorText: Color(0xffffffff));
 
                             Get.off(
@@ -263,7 +263,7 @@ class RegisterView extends GetView<RegisterController> {
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
-                          Color.fromRGBO(0, 0, 0, 1)),
+                          Color.fromRGBO(255, 255, 255, 1)),
                       minimumSize:
                           MaterialStateProperty.all<Size>(Size(350, 41)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -306,7 +306,7 @@ class RegisterView extends GetView<RegisterController> {
                           );
                         },
                         child: Text(
-                          'log in',
+                          'Log in',
                           style: GoogleFonts.poppins(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,

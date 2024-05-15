@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import '../controllers/splashscreen_controller.dart';
 
 class SplashscreenView extends GetView<SplashscreenController> {
@@ -28,15 +28,6 @@ class SplashscreenView extends GetView<SplashscreenController> {
               Container(
                 width: 199,
                 height: 36,
-                child: Text(
-                  'Find all types of haircuts you want!',
-                  textAlign: TextAlign.justify,
-                  style: GoogleFonts.poppins(
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
               ),
             ],
           ),

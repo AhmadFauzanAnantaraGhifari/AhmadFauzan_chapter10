@@ -5,11 +5,11 @@ class SplashscreenController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(seconds: 3), () {
       Get.off(
         () => LoginView(),
         transition: Transition.fade,
-        duration: Duration(seconds: 4),
+        duration: Duration(seconds: 5),
       );
     });
   }
